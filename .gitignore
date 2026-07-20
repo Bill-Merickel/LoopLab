@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode per-user settings
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Xcode build products
+build/
+DerivedData/
+*.hmap
+
+# Test and profiling output
+*.xcresult
+*.profraw
+*.profdata
+coverage/
+
+# App archives and debug symbols
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+
+# Swift Package Manager build output
+.build/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.netrc
+Secrets.xcconfig
+Config/Local.xcconfig
+
+# Signing credentials and provisioning
+*.p8
+*.p12
+*.mobileprovision
+
+# Temporary editor files
+*.swp
+*~

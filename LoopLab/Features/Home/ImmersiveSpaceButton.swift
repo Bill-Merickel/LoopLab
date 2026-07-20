@@ -1,5 +1,5 @@
 //
-//  ToggleImmersiveSpaceButton.swift
+//  ImmersiveSpaceButton.swift
 //  LoopLab
 //
 //  Created by Bill Merickel on 7/19/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToggleImmersiveSpaceButton: View {
+struct ImmersiveSpaceButton: View {
 
     @Environment(AppModel.self) private var appModel
 
@@ -22,16 +22,16 @@ struct ToggleImmersiveSpaceButton: View {
                         appModel.immersiveSpaceState = .inTransition
                         await dismissImmersiveSpace()
                         // Don't set immersiveSpaceState to .closed because there
-                        // are multiple paths to ImmersiveView.onDisappear().
-                        // Only set .closed in ImmersiveView.onDisappear().
+                        // are multiple paths to TrackPreviewImmersiveView.onDisappear().
+                        // Only set .closed in TrackPreviewImmersiveView.onDisappear().
 
                     case .closed:
                         appModel.immersiveSpaceState = .inTransition
                         switch await openImmersiveSpace(id: appModel.immersiveSpaceID) {
                             case .opened:
                                 // Don't set immersiveSpaceState to .open because there
-                                // may be multiple paths to ImmersiveView.onAppear().
-                                // Only set .open in ImmersiveView.onAppear().
+                                // may be multiple paths to TrackPreviewImmersiveView.onAppear().
+                                // Only set .open in TrackPreviewImmersiveView.onAppear().
                                 break
 
                             case .userCancelled, .error:

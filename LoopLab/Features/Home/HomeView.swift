@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  LoopLab
 //
 //  Created by Bill Merickel on 7/19/26.
@@ -9,7 +9,7 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ContentView: View {
+struct HomeView: View {
 
     var body: some View {
         VStack {
@@ -18,13 +18,13 @@ struct ContentView: View {
 
             Text("Hello, world!")
 
-            ToggleImmersiveSpaceButton()
+            ImmersiveSpaceButton()
         }
         .padding()
     }
 }
 
 #Preview(windowStyle: .automatic) {
-    ContentView()
+    HomeView()
         .environment(AppModel())
 }

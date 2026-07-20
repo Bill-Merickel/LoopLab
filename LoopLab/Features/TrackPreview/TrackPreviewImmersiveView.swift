@@ -1,5 +1,5 @@
 //
-//  ImmersiveView.swift
+//  TrackPreviewImmersiveView.swift
 //  LoopLab
 //
 //  Created by Bill Merickel on 7/19/26.
@@ -9,7 +9,7 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ImmersiveView: View {
+struct TrackPreviewImmersiveView: View {
 
     var body: some View {
         RealityView { content in
@@ -25,6 +25,6 @@ struct ImmersiveView: View {
 }
 
 #Preview(immersionStyle: .mixed) {
-    ImmersiveView()
+    TrackPreviewImmersiveView()
         .environment(AppModel())
 }

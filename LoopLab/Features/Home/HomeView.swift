@@ -6,21 +6,29 @@
 //
 
 import SwiftUI
-import RealityKit
-import RealityKitContent
 
 struct HomeView: View {
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+        VStack(spacing: 24) {
+            VStack(spacing: 12) {
+                Text("LoopLab")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
 
-            Text("Hello, world!")
+                Text(
+                    "Inspect the first procedural track pieces in a mixed "
+                        + "immersive-space preview."
+                )
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+            }
 
             ImmersiveSpaceButton()
+                .buttonStyle(.borderedProminent)
         }
-        .padding()
+        .frame(maxWidth: 420)
+        .padding(40)
     }
 }
 

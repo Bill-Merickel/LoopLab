@@ -22,10 +22,10 @@ struct LoopLabApp: App {
             TrackPreviewImmersiveView()
                 .environment(appModel)
                 .onAppear {
-                    appModel.immersiveSpaceState = .open
+                    appModel.immersiveSpaceDidAppear()
                 }
                 .onDisappear {
-                    appModel.immersiveSpaceState = .closed
+                    appModel.immersiveSpaceDidDisappear()
                 }
         }
         .immersionStyle(selection: .constant(.mixed), in: .mixed)

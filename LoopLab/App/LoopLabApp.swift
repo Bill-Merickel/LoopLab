@@ -14,18 +14,18 @@ struct LoopLabApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
                 .environment(appModel)
         }
 
         ImmersiveSpace(id: appModel.immersiveSpaceID) {
-            ImmersiveView()
+            TrackPreviewImmersiveView()
                 .environment(appModel)
                 .onAppear {
-                    appModel.immersiveSpaceState = .open
+                    appModel.immersiveSpaceDidAppear()
                 }
                 .onDisappear {
-                    appModel.immersiveSpaceState = .closed
+                    appModel.immersiveSpaceDidDisappear()
                 }
         }
         .immersionStyle(selection: .constant(.mixed), in: .mixed)

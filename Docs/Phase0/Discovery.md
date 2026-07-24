@@ -17,7 +17,7 @@ Updated: 2026-07-23
 - LoopLab deployment target: visionOS 26.5
 - Physical Apple Vision Pro: available
 - DualSense controller: available
-- Device visionOS version: record during physical acceptance testing
+- Device visionOS version: 26.5
 - DualSense firmware version: record during physical acceptance testing
 
 ## Capability assumptions

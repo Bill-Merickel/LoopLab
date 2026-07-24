@@ -57,4 +57,8 @@ nonisolated struct TrackPieceDefinition: Sendable {
     func socket(with role: TrackSocket.Role) -> TrackSocket? {
         sockets.first { $0.role == role }
     }
+
+    func socket(withID id: TrackSocket.ID) -> TrackSocket? {
+        sockets.first { $0.id == id }
+    }
 }
